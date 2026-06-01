@@ -28,7 +28,14 @@ export function RecommendationGrid({ recommendations, payments, planId, isLoadin
     )
   }
 
-  const sorted = [...recommendations].sort((a, b) => a.sortOrder - b.sortOrder)
+  const sorted = [...recommendations].sort((a, b) => {
+    const aIsPriority = a.priorityRank !== null && a.priorityRank <= 2
+    const bIsPriority = b.priorityRank !== null && b.priorityRank <= 2
+    if (aIsPriority && bIsPriority) return (a.priorityRank as number) - (b.priorityRank as number)
+    if (aIsPriority) return -1
+    if (bIsPriority) return 1
+    return a.sortOrder - b.sortOrder
+  })
 
   return (
     <>

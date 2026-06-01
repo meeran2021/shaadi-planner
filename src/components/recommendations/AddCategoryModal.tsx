@@ -94,6 +94,8 @@ export function AddCategoryModal({ opened, onClose, planId }: Props) {
             onChange={v => setForm(f => ({ ...f, suggestedMin: v as number | '' }))}
             error={errors.suggestedMin}
             min={1}
+            allowNegative={false}
+            clampBehavior="strict"
             leftSection={<IconCurrencyRupee size={16} />}
             thousandSeparator=","
             required
@@ -105,6 +107,8 @@ export function AddCategoryModal({ opened, onClose, planId }: Props) {
             onChange={v => setForm(f => ({ ...f, suggestedMax: v as number | '' }))}
             error={errors.suggestedMax}
             min={1}
+            allowNegative={false}
+            clampBehavior="strict"
             leftSection={<IconCurrencyRupee size={16} />}
             thousandSeparator=","
             required

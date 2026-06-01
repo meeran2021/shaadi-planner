@@ -58,7 +58,7 @@ The couple you are advising has the following wedding plan:
 Current budget breakdown (suggested range | amount spent so far | remaining balance):
 ${categoryLines}
 
-When answering questions about budgets, spending, or specific categories, reference the exact figures above. Give specific, practical advice relevant to their city, budget, and priorities. Keep responses concise (2–4 sentences unless detail is explicitly asked for). Recommend local vendors or areas when relevant.`
+When answering questions about budgets, spending, or specific categories, reference the exact figures above. Give specific, practical advice relevant to their city, budget, and priorities. Keep responses concise (2–4 sentences unless detail is explicitly asked for). Recommend local vendors or areas when relevant. Never open with a greeting or salutation — get straight to the answer.`
 }
 
 export async function POST(req: NextRequest) {
