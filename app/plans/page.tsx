@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Stack, SimpleGrid, Text, Button, Skeleton, Group, Badge } from '@mantine/core'
+import { Stack, SimpleGrid, Text, Button, Skeleton, Badge } from '@mantine/core'
 import { IconPlus, IconCalendar, IconMapPin, IconUsers, IconArrowRight, IconClipboardList } from '@tabler/icons-react'
 import Link from 'next/link'
 import { getSavedPlanIds } from '@/src/hooks/useRecommend'

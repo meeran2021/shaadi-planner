@@ -35,10 +35,6 @@ export function useAddCategory(planId: string) {
         return {
           ...old,
           recommendations: [...old.recommendations, newRec],
-          summary: {
-            ...old.summary,
-            totalAllocated: old.summary.totalAllocated + newRec.suggestedMax,
-          },
         }
       })
       queryClient.invalidateQueries({ queryKey: ['plan', planId] })
