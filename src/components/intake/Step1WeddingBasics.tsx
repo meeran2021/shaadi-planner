@@ -37,7 +37,7 @@ export function Step1WeddingBasics({ weddingDate, guestCount, errors, onChange }
         placeholder="Select your wedding date"
         value={weddingDate ? new Date(weddingDate) : null}
         onChange={d => onChange('weddingDate', d ? dayjs(d).format('YYYY-MM-DD') : '')}
-        minDate={new Date()}
+        minDate={dayjs().add(1, 'day').toDate()}
         error={errors.weddingDate}
         leftSection={<IconCalendar size={16} />}
         size="md"
